@@ -1,30 +1,31 @@
+/* Adding color to the document, so it can change the color of every font in one spot */
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    color: #ffffff;
 }
 
 body {
     background-color: #d9dcd6;
 }
-
-.header {
+/* Removed '.' from all the header classes because of an update in my html file */
+header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #2a607c;
-    color: #ffffff;
 }
 
-.header h1 {
+header h1 {
     display: inline-block;
     font-size: 48px;
 }
-
-.header h1 .seo {
+/* Has no function and doesn't change when I comment it out. */
+/* header h1 .seo { 
     color: #d9dcd6;
-}
+ }  */
 
-.header div {
+header nav {
     padding-top: 15px;
     margin-right: 20px;
     float: right;
@@ -32,17 +33,16 @@ body {
     font-size: 20px;
 }
 
-.header div ul {
+header nav ul {
     list-style-type: none;
 }
 
-.header div ul li {
+header nav ul li {
     display: inline-block;
     margin-left: 25px;
 }
 
 a {
-    color: #ffffff;
     text-decoration: none;
 }
 
@@ -70,13 +70,14 @@ p {
     margin-left: 25px;
 }
 
-.content {
+/* Changed to main from .content */
+main {
     width: 75%;
     display: inline-block;
     margin-left: 20px;
 }
 
-.benefits {
+aside {
     margin-right: 20px;
     padding: 20px;
     clear: both;
@@ -85,13 +86,8 @@ p {
     height: 100%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #2589bd;
-}
-
-/* All of the h3 elements have the same css, so I'm just going to combine them into one css element */
-
-.benefit {
+    /*All the h3 elements have the same css, so I'm just going to combine them into one css element*/
     margin-bottom: 32px;
-    color: #ffffff;
 }
 
 /*.benefit-lead {
@@ -110,8 +106,8 @@ p {
 }*/
 
 /* All of the h3 elements have the same css, so I'm just going to combine them into one css element */
-.benefit {
-    margin-bottom: 10px;
+aside h3 {
+    margin-top: 25px;
     text-align: center;
 }
 /*.benefit-lead h3 {
@@ -129,7 +125,14 @@ p {
     text-align: center;
 }*/
 
-.benefit-lead img {
+/*All the benefits img elements have the same css applied to them*/
+aside img {
+    display: block;
+    margin: 10px auto;
+    max-width: 150px;
+}
+
+/*.benefit-lead img {
     display: block;
     margin: 10px auto;
     max-width: 150px;
@@ -145,9 +148,18 @@ p {
     display: block;
     margin: 10px auto;
     max-width: 150px;
+}*/
+
+/* All of the section tags for the boxes fall under the element 'main' we can create css for main */
+main section {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
 }
 
-.search-engine-optimization {
+/*.search-engine-optimization {
     margin-bottom: 20px;
     padding: 50px;
     height: 300px;
@@ -172,9 +184,14 @@ p {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #0072bb;
     color: #ffffff;
+}*/
+
+/* All of the img tags fall under the same main tag.  Going to create one css that reaches all of the img */
+main img {
+    max-height: 200px;
 }
 
-.search-engine-optimization img {
+/*.search-engine-optimization img {
     max-height: 200px;
 }
 
@@ -184,9 +201,15 @@ p {
 
 .social-media-marketing img {
     max-height: 200px;
+}*/
+
+/*All of the h2 tags fall under the same section.  Going to create one css that applies to them all  */
+main h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
 }
 
-.search-engine-optimization h2 {
+/*.search-engine-optimization h2 {
     margin-bottom: 20px;
     font-size: 36px;
 }
@@ -199,13 +222,14 @@ p {
 .social-media-marketing h2 {
     margin-bottom: 20px;
     font-size: 36px;
-}
+}*/
 
-.footer {
+footer {
     padding: 30px;
     clear: both;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
+    color: black;
 }
 
 /* Not necessary.  We can just change the heading element to an appropriate size instead of adding a css and a font-size to make it smaller */
